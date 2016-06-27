@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  username: postgres
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: grad-dev
+
+test:
+  <<: *default
+  database: grad-test
+
+production:
+  <<: *default
+  database: grad-prod
