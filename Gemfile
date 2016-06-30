@@ -20,6 +20,8 @@ gem 'minitest-rails'
 
 gem 'state_machine'
 
+gem 'bcrypt'
+
 group :production do
   gem 'rails_12factor'
 end
