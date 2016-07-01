@@ -3,8 +3,6 @@ require "test_helper"
 class UsersControllerTest < ActionController::TestCase
   setup do
     @attrs = attributes_for :user
-    # p @test_attr
-    # @attrs = {first_name: "John", last_name: "Lennon", email: "yesterday@bitlz.com", password: "yelwsbmrn"}
   end
   def test_new
     get :new
@@ -15,7 +13,7 @@ class UsersControllerTest < ActionController::TestCase
     assert_difference('User.count') do
       post :create, user: @attrs
     end
-    assert_redirected_to '/'
+    assert_redirected_to root_path
   end
 
   def test_false_create
