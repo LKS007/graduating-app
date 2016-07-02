@@ -1,12 +1,12 @@
 = simple_form_for @user  do |f|
 
-  = f.input :first_name, placeholder: 'First Name'
+  = f.input :first_name, placeholder: t("placeholder.user.first_name")
 
-  = f.input :last_name, placeholder: 'Last Name'
+  = f.input :last_name, placeholder: t("placeholder.user.last_name")
 
-  = f.input :email, placeholder: 'Email'
+  = f.input :email, placeholder: t("placeholder.user.email")
 
-  = f.input :password, placeholder: 'Password'
+  = f.input :password, placeholder: t("placeholder.user.password")
 
   %p
     = f.button :submit

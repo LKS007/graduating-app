@@ -18,7 +18,7 @@ class SessionsControllerTest < ActionController::TestCase
 
   def test_destroy
     delete :destroy
-    assert_equal(session[:user_id], nil)
+    assert { session[:user_id] == nil }
     assert_redirected_to root_path
   end
 
@@ -26,9 +26,8 @@ class SessionsControllerTest < ActionController::TestCase
     @user = create :user
     post :create,
       session: {email: @user.email, password: @user.password }
-      assert_equal(session[:user_id], @user.id)
+      assert { session[:user_id] == @user.id }
       assert_redirected_to root_path
-    # post :create, controller: 'users'
   end
 
 end

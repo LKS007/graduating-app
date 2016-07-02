@@ -1,6 +1,6 @@
-%h1 Log in
+%h1= t(".log_in")
       
 = simple_form_for(:session, url: sessions_path) do |f|
-  = f.input :email, :placeholder => "Email"
-  = f.input :password, :placeholder => "Password"
+  = f.input :email, :placeholder => t("placeholder.session.email")
+  = f.input :password, :placeholder => t("placeholder.session.password")
   = f.button :submit
