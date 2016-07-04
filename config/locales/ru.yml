@@ -1,4 +1,8 @@
 ru:
+  title: "Менеджер задач"
+  users:
+    new:
+      signup: "Регистрация"
   sessions:
     new:
       log_in: "Авторизация"

@@ -1,5 +1,9 @@
 en:
   hello: "Hello world"
+  title: "Task Manager"
+  users:
+    new:
+      signup: "Signup"
   sessions:
     new:
       log_in: "Log in"

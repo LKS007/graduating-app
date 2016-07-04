@@ -1,4 +1,6 @@
-= simple_form_for @user  do |f|
+%h1= t(".signup")
+
+= simple_form_for(@user, wrapper: :horizontal_form)  do |f|
 
   = f.input :first_name, placeholder: t("placeholder.user.first_name")
 
