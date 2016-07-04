@@ -9,7 +9,7 @@ class Task < ActiveRecord::Base
       transition [:rejected, :assigned] => :doing
     end
 
-    event :test do
+    event :tested do
       transition [:rejected, :doing] => :testing
     end
 
