@@ -19,7 +19,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'coveralls', require: false
 gem 'minitest-rails'
 
-gem 'state_machine'
+gem 'state_machines-activerecord'
 
 gem 'bcrypt'
 
