@@ -24,6 +24,6 @@ class Task < ActiveRecord::Base
     event :arcive do
       transition [:new, :accepted] => :archived
     end
-    
   end
+  belongs_to :user, foreign_key: "current_user_id"
 end
