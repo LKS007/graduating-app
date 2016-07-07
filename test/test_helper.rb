@@ -9,5 +9,6 @@ require 'minitest/rails'
 
 class ActiveSupport::TestCase
   include Wrong
+  include AuthHelper
   include FactoryGirl::Syntax::Methods
 end
