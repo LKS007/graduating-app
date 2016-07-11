@@ -1,2 +1,5 @@
-%h1 Welcome#index
+- if current_user
+  %h1= current_user.last_name + " " + current_user.first_name
+- else
+  %h1 Welcome Guest
 %p Find me in app/views/welcome/index.html.haml

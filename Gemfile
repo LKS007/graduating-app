@@ -20,6 +20,7 @@ gem 'coveralls', require: false
 gem 'minitest-rails'
 
 gem 'state_machine'
+gem 'enumerize'
 
 gem 'bcrypt'
 

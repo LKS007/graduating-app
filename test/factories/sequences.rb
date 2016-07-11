@@ -14,4 +14,16 @@ FactoryGirl.define do
   sequence :password do |n|
     "123qw#{n}"
   end
+
+  sequence :from do |n|
+    "otkogo#{n}@mail.ru"
+  end
+
+  sequence :to do |n|
+    "komu#{n}@mail.ru"
+  end
+
+  sequence :subject do |n|
+    "tema pisma"
+  end
 end
