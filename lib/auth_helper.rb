@@ -4,7 +4,10 @@ module AuthHelper
   end
 
   def login_manager
-    redirect_to root_path if session[:user_id].nil? || !User.find(session[:user_id]).manager?
+    if session[:user_id].nil? || !User.find(session[:user_id]).manager?
+      flash[:danger] = "You don't have manager's permissions!!!"
+      redirect_to root_path
+    end
   end
 
   def current_user
