@@ -7,8 +7,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       UserMailer.welcome_email(@user).deliver_later
-      session[:user_id] = @user.id
-      redirect_to '/'
+      auth_user(@user)
+      redirect_to root_path
     else
       redirect_to '/signup'
     end
