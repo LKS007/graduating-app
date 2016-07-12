@@ -6,4 +6,9 @@ class WelcomeControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  def test_set_local
+    get :index, {:locale => 'ru'}
+    assert { I18n.locale == :ru }
+  end
+
 end
