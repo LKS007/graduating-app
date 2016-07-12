@@ -1,0 +1,17 @@
+ru:
+  title: "Менеджер задач"
+  users:
+    new:
+      signup: "Регистрация"
+  sessions:
+    new:
+      log_in: "Авторизация"
+  placeholder:
+    session:
+      email: "Email"
+      password: "Пароль"
+    user:
+      first_name: "Имя"
+      last_name: "Фамилия"
+      email: "Email"
+      password: "Пароль"

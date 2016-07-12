@@ -10,6 +10,7 @@ gem 'sass-rails', '>= 3.2'
 gem 'sprockets'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
+gem 'bootswatch-rails'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
@@ -19,6 +20,9 @@ gem 'coveralls', require: false
 gem 'minitest-rails'
 
 gem 'state_machine'
+gem 'enumerize'
+
+gem 'bcrypt'
 
 group :production do
   gem 'rails_12factor'
