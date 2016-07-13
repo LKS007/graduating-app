@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
   resources :sessions
+  resources :tasks
 
   namespace :admin do
     resources :tasks

@@ -9,6 +9,7 @@ ru:
   welcome:
     index:
       current_language: "Текущий язык: русский"
+      welcome_guest: "Добро пожаловать, гость"
   placeholder:
     session:
       email: "Email"
@@ -18,3 +19,11 @@ ru:
       last_name: "Фамилия"
       email: "Email"
       password: "Пароль"
+  navbar:
+    pick_option: "Выберите опцию"
+    home: "Домой"
+    language: "Язык"
+    admin: "Админ панель"
+    log_out: "Выйти"
+    log_in: "Авторизация"
+    signup: "Регистрация"
