@@ -11,6 +11,7 @@ gem 'sprockets'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 gem 'bootswatch-rails'
+gem 'rails_bootstrap_navbar'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'

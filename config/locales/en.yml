@@ -7,6 +7,9 @@ en:
   sessions:
     new:
       log_in: "Log in"
+  welcome:
+    index:
+      current_language: "Current Language: English"
   placeholder:
     session:
       email: "Email"

@@ -6,6 +6,9 @@ ru:
   sessions:
     new:
       log_in: "Авторизация"
+  welcome:
+    index:
+      current_language: "Текущий язык: русский"
   placeholder:
     session:
       email: "Email"
