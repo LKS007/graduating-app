@@ -1,4 +1,6 @@
 class Task < ActiveRecord::Base
+  before_save :end_of_task
+  validates :current_user_id, presence: true
   state_machine initial: :new do
     event :assign do
       # validation?!?
@@ -26,4 +28,12 @@ class Task < ActiveRecord::Base
     end
   end
   belongs_to :user, foreign_key: "current_user_id"
+
+  private
+
+  def end_of_task
+    if self.end_date.nil?
+      self.end_date = Date.today + 7
+    end
+  end
 end

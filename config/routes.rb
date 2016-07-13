@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   get 'signup'  => 'users#new' 
   resources :users
   get 'login' => 'sessions#new'
-  delete 'logout' => 'sessions#destroy'
+  get 'logout' => 'sessions#destroy'
   resources :sessions
+  resources :tasks
 
   namespace :admin do
     resources :tasks

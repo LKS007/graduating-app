@@ -1,0 +1,28 @@
+= navbar do
+  = navbar_header brand: 'My great app', brand_link: '/'
+  = navbar_collapse do
+    = navbar_group class: 'foo', id: 'menu' do
+      = navbar_text t("navbar.pick_option")
+      = navbar_item t("navbar.home"), '/'
+      - if current_user && current_user.manager?
+        = navbar_item t("navbar.admin"), '/admin'
+      - else
+        = navbar_item '/contact' do
+          %span.glyphicon.glyphicon-hand-right
+          Contact Us!
+      = navbar_dropdown t("navbar.language") do
+        - if request.original_url.include?('?')
+          = navbar_item "English", request.original_url + '&locale=en'
+          = navbar_item "Русский", request.original_url + '&locale=ru'
+        - else
+          = navbar_item "English", request.original_url + '?locale=en'
+          = navbar_item "Русский", request.original_url + '?locale=ru'
+    = navbar_group align: 'right' do
+      - if current_user # check if user is logged in, maybe like "if current_user.present?"
+        = navbar_item t("navbar.log_out"), '/logout'
+        = navbar_text do
+          = current_user.first_name
+          %span.glyphicon.glyphicon-user
+      - else
+        = navbar_item t("navbar.log_in"), '/login'
+        = navbar_item t("navbar.signup"), '/signup'
