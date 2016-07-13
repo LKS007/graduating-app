@@ -19,6 +19,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'coveralls', require: false
 gem 'minitest-rails'
+gem 'kaminari'
 
 gem 'state_machine'
 gem 'enumerize'
