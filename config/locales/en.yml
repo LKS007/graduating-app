@@ -10,6 +10,7 @@ en:
   welcome:
     index:
       current_language: "Current Language: English"
+      welcome_guest: "Welcome Guest"
   placeholder:
     session:
       email: "Email"
@@ -19,3 +20,11 @@ en:
       last_name: "Last name"
       email: "Email"
       password: "Password"
+  navbar:
+    pick_option: "Pick an Option"
+    home: "Home"
+    language: "Language"
+    admin: "Admin Panel"
+    log_out: "Log Out"
+    log_in: "Log In"
+    signup: "Registration"

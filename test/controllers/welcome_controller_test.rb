@@ -11,4 +11,9 @@ class WelcomeControllerTest < ActionController::TestCase
     assert { I18n.locale == :ru }
   end
 
+  def test_set_loc_with_amp
+    get :index, {locale: 'ru', dress: "tshort"}
+    assert { I18n.locale == :ru }
+  end
+
 end
