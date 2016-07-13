@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   def set_local
     if params[:locale] && I18n.available_locales.include?(params[:locale].to_sym)
       I18n.locale = params[:locale]
-      url = request.original_url.split("?locate")
+      url = request.original_url.split("?locale")
       redirect_to url.first
     end
   end
