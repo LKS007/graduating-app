@@ -1,0 +1,9 @@
+= simple_form_for(:task, wrapper: :horizontal_form, url: admin_tasks_path) do |f|
+  = f.input :title, :placeholder => t("title")
+  = f.input :description, :placeholder => "description"
+  = f.input :author_id, :placeholder => "Author", readonly: true, input_html: {value: current_user.id}
+  = f.input :current_user_id, :collection=>@users, :label_method => :first_name, :value_method => :id,
+   :include_blank => false
+  = f.input :end_date, as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') }
+
+  = f.button :submit

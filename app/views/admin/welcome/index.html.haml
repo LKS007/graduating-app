@@ -25,6 +25,11 @@
           = task.user.first_name
         %td
           = task.state
-        %td
+        %td{:width => "120px"}
           = task.end_date
 = paginate @tasks
+%p
+  / %button.btn-success Add Task 
+  %button.btn.btn-success=link_to "New", new_admin_task_path, {:style => "color:#FFFFFF;"}
+  / %span.label.label-info Hey
+

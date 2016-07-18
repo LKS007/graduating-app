@@ -1,6 +1,6 @@
 class Task < ActiveRecord::Base
   before_save :end_of_task
-  validates :current_user_id, presence: true
+  validates :current_user_id, :title, :description, presence: true
   state_machine initial: :new do
     event :assign do
       # validation?!?
