@@ -26,4 +26,13 @@ FactoryGirl.define do
   sequence :subject do |n|
     "tema pisma"
   end
+
+  sequence :title do |n|
+    "title #{n}"
+  end
+
+  sequence :description do |n|
+    "My Desc##{n}"
+  end
+
 end

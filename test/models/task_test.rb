@@ -3,6 +3,9 @@ require "test_helper"
 class TaskTest < ActiveSupport::TestCase
   setup do
     @user = create :user
+    @task_attr = attributes_for :task
+    task.title = @task_attr[:title]
+    task.description = @task_attr[:description]
   end
   
   def task
@@ -10,7 +13,7 @@ class TaskTest < ActiveSupport::TestCase
   end
 
   def test_valid
-    task.current_user_id = 5
+    task.current_user_id = 5    
     assert task.valid?
   end
 
